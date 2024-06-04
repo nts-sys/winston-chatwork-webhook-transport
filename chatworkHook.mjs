@@ -9,7 +9,6 @@ export class ChatworkHook extends Transport {
 
     this.name = opts.name || "chatworkWebhook";
     this.level = opts.level || undefined;
-    this.formatter = opts.formatter || undefined;
     this.roomid = opts.roomid || undefined;
     this.token = opts.token || undefined;
   }
@@ -18,26 +17,9 @@ export class ChatworkHook extends Transport {
     const host = "api.chatwork.com";
 
     let bodyText = `${info.level}: ${info.message}`;
-    // if (this.formatter && typeof this.formatter === "function") {
-    //   let layout = this.formatter(info);
-
-    //   if (!layout) {
-    //     callback();
-
-    //     return;
-    //   }
-
-    //   // Note: Supplying `text` when `blocks` is also supplied will cause `text`
-    //   // to be used as a fallback for clients/surfaces that don't suopport blocks
-    //   Object.keys(layout).forEach((key) => {
-    //     payload[key] = layout[key];
-    //   });
-    // } else {
-    //   bodyText = `${info.level}: ${info.message}`;
-    // }
     const data = "body=" + bodyText;
 
-    console.log(data);
+    // console.log(data);
     const options = {
       hostname: host,
       port: 443,
@@ -50,20 +32,18 @@ export class ChatworkHook extends Transport {
       },
     };
 
-    // let req = https.request(options, (res) => {
-    //   console.log("status code : " + res.statusCode);
-    //   res.setEncoding("utf8");
-    //   res.on("data", (d) => {
-    //     console.log(d);
-    //     callback();
-    //   });
-    // });
+    const req = https.request(options, (res) => {
+      res.setEncoding("utf8");
+      res.on("data", (d) => {
+        callback();
+      });
+    });
 
-    // req.on("error", (e) => {
-    //   console.error(e);
-    // });
+    req.on("error", (e) => {
+      console.error(e);
+    });
 
-    // req.write(data);
-    // req.end();
+    req.write(data);
+    req.end();
   }
 }
