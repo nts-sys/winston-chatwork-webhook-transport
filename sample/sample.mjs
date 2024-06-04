@@ -19,7 +19,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.Console({ level: "debug" }),
     new ChatworkHook({
-      level: "info",
+      level: "error",
       roomid: process.env.roomid,
       token: process.env.token,
     }),
@@ -29,4 +29,4 @@ const logger = winston.createLogger({
 logger.debug("Debug Message");
 logger.info("Info Message");
 logger.warn("Warn Message");
-logger.error("error: ", "Error Message");
+logger.error("Error Message");
