@@ -35,7 +35,7 @@ export class ChatworkHook extends Transport {
     const req = https.request(options, (res) => {
       res.setEncoding("utf8");
       res.on("data", (d) => {
-        callback();
+        callback(d);
       });
     });
 

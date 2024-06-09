@@ -3,7 +3,8 @@
   "version": "0.0.3",
   "description": "A Chatwork transport for Winston 3 that logs to a channel via webhooks.",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
+    "eslint": "^9.4.0",
+    "eslint-plugin-jsdoc": "^48.2.9",
     "mocha": "^10.4.0",
     "prettier": "^3.3.0",
     "winston": "^3.13.0"
