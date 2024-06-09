@@ -1,5 +1,5 @@
 import assert from "assert";
-import { ChatworkHook } from "../chatworkHook.mjs";
+import { ChatworkHook } from "../index.mjs";
 
 describe("Array", function () {
   describe("#indexOf()", function () {

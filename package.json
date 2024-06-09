@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git@github.com:nts-sys/winston-chatwork-webhook-transport.git"
   },
-  "main": "chatworkHook.mjs",
+  "main": "index.mjs",
   "author": "nts-sys",
   "license": "MIT",
   "bugs": {

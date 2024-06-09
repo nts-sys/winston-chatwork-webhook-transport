@@ -1,6 +1,6 @@
 import * as dotenv from "dotenv";
 import winston from "winston";
-import { ChatworkHook } from "../chatworkHook.mjs";
+import { ChatworkHook } from "../index.mjs";
 import path from "path";
 import { fileURLToPath } from "url";
 
