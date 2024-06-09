@@ -1,5 +1,7 @@
 # winston-chatwork-webhook-transport
 
+- node用のloggerであるwinstonについてChatworkへの投稿を行うためのtransport
+
 ## Installation
 
 ```
