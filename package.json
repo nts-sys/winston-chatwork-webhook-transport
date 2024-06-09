@@ -5,6 +5,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "main":"chatworkHook.mjs",
   "author": "nts-sys",
   "license": "MIT",
   "keywords": [
