@@ -11,5 +11,26 @@ npm install winston winston-chatwork-webhook-transport
 ### Set up with transports
 
 ```Javascript
+const logger = winston.createLogger({
+  level: "info",
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.splat(),
+    winston.format.json()
+  ),
+  transports: [
+    new winston.transports.Console({ level: "debug" }),
+    new ChatworkHook({
+      level: "error",
+      roomid: process.env.roomid,
+      token: process.env.token,
+    }),
+  ],
+});
+
+logger.debug("Debug Message");
+logger.info("Info Message");
+logger.warn("Warn Message");
+logger.error("Error Message");
 
 ```
