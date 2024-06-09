@@ -1,6 +1,6 @@
 {
   "name": "winston-chatwork-webhook-transport",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Chatwork transport for Winston 3 that logs to a channel via webhooks.",
   "scripts": {
     "test": "mocha"
