@@ -6,6 +6,7 @@
     "test": "mocha"
   },
   "author": "nts-sys",
+  "license": "MIT",
   "keywords": [
     "winston",
     "transport",
