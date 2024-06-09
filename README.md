@@ -12,9 +12,18 @@ npm install winston winston-chatwork-webhook-transport
 
 ## Usage
 
+- Chatwork ルームIDを確認する
+  - https://help.chatwork.com/hc/ja/articles/360000142942-%E3%83%AB%E3%83%BC%E3%83%A0ID%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B
+- Chatwork APIトークンを発行する
+  - https://help.chatwork.com/hc/ja/articles/115000172402-API%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E3%82%92%E7%99%BA%E8%A1%8C%E3%81%99%E3%82%8B
+
 ### Set up with transports
 
 ```Javascript
+import * as dotenv from "dotenv";
+import winston from "winston";
+import { ChatworkHook } from "winston-chatwork-webhook-transport";
+
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
