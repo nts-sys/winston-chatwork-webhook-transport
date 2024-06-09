@@ -5,9 +5,16 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nts-sys/winston-chatwork-webhook-transport.git"
+  },
   "main": "chatworkHook.mjs",
   "author": "nts-sys",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nts-sys/winston-chatwork-webhook-transport/issues"
+  },
   "keywords": [
     "winston",
     "transport",
