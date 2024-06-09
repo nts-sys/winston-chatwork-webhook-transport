@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/nts-sys/winston-chatwork-webhook-transport/actions/workflows/node.js.yml/badge.svg)](https://github.com/nts-sys/winston-chatwork-webhook-transport/actions/workflows/node.js.yml)
+
 # winston-chatwork-webhook-transport
 
 - node用のloggerであるwinstonについてChatworkへの投稿を行うためのtransport
